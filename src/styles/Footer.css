@@ -1,0 +1,73 @@
+.product-card {
+    height: 384px;
+    width: 289px;
+    background: #F5F5F5;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+}
+
+.product-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: #3E424B;
+    padding: 22px 30px 10px 22px;
+
+}
+
+.product-price {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: #BB8C5F;
+    padding: 0px 166px 30px 30px;
+}
+
+.wrapper-up {
+    display: flex;
+}
+
+.wrapper-down {
+    display: flex;
+}
+
+.wrapper-down-down {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-wrapper2 {
+    padding: 124px 352px;
+}
