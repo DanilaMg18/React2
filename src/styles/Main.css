@@ -27,3 +27,11 @@ body {
     display: flex;
     margin-left: 352px;
 }
+
+.main-block:hover {
+    background-color: #ff7b00;
+}
+
+.main-text:hover {
+    color: #fcf9f7;
+}

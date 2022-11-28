@@ -9,9 +9,7 @@ function Footer() {
 
     return(
       <div className='card-wrapper2'>
-        <div className='wrapper-up'>{list}</div>
-        <div className='wrapper-down'>{list}</div>
-        <div className='wrapper-down-down'>{list}</div>
+        {list}
       </div>
     )
 }
