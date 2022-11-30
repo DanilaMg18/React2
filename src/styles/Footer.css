@@ -1,9 +1,11 @@
 .product-card {
-    height: 384px;
+    /* height: 384px; */
     width: 289px;
     background: #F5F5F5;
     margin-right: 20px;
     margin-bottom: 20px;
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.1);
+    position: relative;
 
 }
 
@@ -28,10 +30,20 @@
    padding: 0px 166px 0px 30px;
 }
 
-.product-svg {
- position: absolute;
- margin: 35px 34px 331px 235px;
+.favorite {
+    position: absolute;
+    top: 20px;
+    right: 34px;
+    cursor: pointer;
 }
+
+.favorite.red {
+    position: absolute;
+    top: 20px;
+    right: 34px;
+    cursor: pointer;
+ }
+
 
 .card-wrapper2 {
     padding: 124px 352px;
@@ -41,32 +53,33 @@
     grid-auto-rows: repeat(4, 384px);
 }
 
-.button1 {
-    width: 6px;
-    height: 6px;
-    background: #524336;
-    margin-right: 6px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.button {
-    width: 6px;
-    height: 6px;
-    background: #E3E3E3;
-    margin-right: 6px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-
-}
-
 .product-button {
     display: flex;
     padding-left: 121px;
 }
 
+.img {
+    width: 100%;
+}
 
+.add {
+    background: #EEEEEE;
+    border: 2px solid #BB8C5F;
+    height: 50px;
+    width: 259px;
+    margin: 20px 12px 30px 12px;
+    cursor: pointer;
+}
 
+.add-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    margin: 8px 30px 12px 30px;
+    color: #BB8C5F;
+}
 
 
 

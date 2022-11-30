@@ -1,10 +1,10 @@
 import React from 'react'
 import Card from './Product'
-import data from '../Data'
+import data from '../Data.js'
 
 function Footer() {
-    let list = data.map(card => {
-        return <Card data={card}/>
+    let list = data.map((card,idx) => {
+        return <Card key={idx} data={card}/>
     })
 
     return(

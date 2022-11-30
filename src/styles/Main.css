@@ -30,8 +30,8 @@ body {
 
 .main-block:hover {
     background-color: #ff7b00;
+    cursor: pointer;
 }
-
-.main-text:hover {
-    color: #fcf9f7;
+.main-block:hover .main-text {
+    color: rgb(255, 255, 255);
 }
