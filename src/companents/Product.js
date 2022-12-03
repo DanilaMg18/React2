@@ -1,9 +1,11 @@
 import React, {useState} from "react";
+import AddToCart from "./button";
+import AddSomething from "./plis";
 
 function Card(props) {
     let [number,setNumber] = useState(0)
     let [heart,setHeart] = useState(props.data.isFavorite)
-    let [change,setChange] = useState(props.data.inStash)
+    let [showCart,setShowCart] = useState(true);
     
     let changeFavorite = ()=> {
         setHeart(prev => !prev)
@@ -12,26 +14,27 @@ function Card(props) {
     
     let heartImg = heart ? './assets/serdce.svg' : './assets/Vector.svg'
 
-    let changeBlock = () => {
-        setChange(prev => !prev)
+    function changeCartState() {
+        setShowCart(prevCart => !prevCart)
+        setNumber(prev => prev + 1)
     }
 
-    let changeNumber =() => {
-        setNumber(number+1)           //Propisat nuzno vtoruju tolko s minusom 
-        number++
+    let changeNumber = () => {
+        setNumber(prevNumber => prevNumber + 1)        //Propisat nuzno vtoruju tolko s minusom 
     }
 
-    let changeNumber2 =() => {
-        setNumber(number-1)           //Propisat nuzno vtoruju tolko s minusom 
-        number++
+    let changeNumber2 = () => {
+        setNumber(prevNumber => {
+            if (prevNumber === 0) {
+                changeCartState()
+                return 0
+            }else {
+                return prevNumber - 1
+            }
+        })
+
     }
     
-    // function remove(){
-    //     document.getElementById("add").remove();
-    // }
-    
-
-
     return(
         <div className="product-card">
             <div>
@@ -42,21 +45,9 @@ function Card(props) {
             </div>
             <div className="product-name"><p>{props.data.title}</p></div>
             <div className="product-price">{props.data.price}</div>
-            <div id="add" className="add" src={changeBlock}> 
-                <p className="add-text">Добавить в корзину</p>
-            </div>
-            <div className="plus-minus">
-                <div className="minus" onClick={changeNumber2}>
-                    <p>-</p>
-                </div>
-                <div className="amount">
-                    <p className="p-number">{number} шт.</p>
-                    <p className="p-p">В корзине</p>
-                </div>
-                <div className="plus" onClick={changeNumber}>
-                    <p>+</p>
-                </div>
-            </div>
+            {showCart && <AddToCart func={changeCartState} />}
+            {!showCart && <AddSomething minus={changeNumber2} plus={changeNumber} number={number}/>}
+
         </div>
     )
 }

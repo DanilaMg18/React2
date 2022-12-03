@@ -7,7 +7,6 @@ let data = [
         title: 'Foxxx Kitsune Mini Black Vintage RCA',
         price: '6000 ₽',
         isFavorite: true,
-        inStash: true
     },
     {
         svg: './assets/Vector.svg',
@@ -15,7 +14,6 @@ let data = [
         title: 'Skinductor Vertigo Long Stroke Line Double',
         price: '17562 ₽',
         isFavorite: false,
-        inStash: false
     },
     {
         svg: './assets/Vector.svg',
